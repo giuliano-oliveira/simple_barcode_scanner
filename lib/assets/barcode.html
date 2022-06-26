@@ -38,7 +38,16 @@
              }
 
          };
-         const config = { fps: 10, qrbox:  { width: 280, height: 120, aspectRatio: 1.7777778 } };
+        const config = {
+            fps: 10,
+            qrbox: { width: 280, height: 120, aspectRatio: 1.7777778 },
+            // Important notice: this is experimental feature, use it at your
+            // own risk. See documentation in
+            // mebjas@/html5-qrcode/src/experimental-features.ts
+            experimentalFeatures: {
+                useBarCodeDetectorIfSupported: true,
+            },
+        };
 
          // If you want to prefer back camera
          html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
