@@ -40,13 +40,14 @@
          };
         const config = {
             fps: 10,
-            qrbox: { width: 280, height: 120, aspectRatio: 1.7777778 },
+            qrbox: { width: 250, height: 250 },
             // Important notice: this is experimental feature, use it at your
             // own risk. See documentation in
             // mebjas@/html5-qrcode/src/experimental-features.ts
             experimentalFeatures: {
-                useBarCodeDetectorIfSupported: true,
+            useBarCodeDetectorIfSupported: true,
             },
+            rememberLastUsedCamera: true,
         };
 
          // If you want to prefer back camera
